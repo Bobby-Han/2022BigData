@@ -1,0 +1,48 @@
+[[D@60215eee, [D@4ca8195f, [D@65e579dc, [D@61baa894, [D@b065c63]
+[0, 1, 2, 3, 4]
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (unsupervised):
+	Principal Components Attribute Transformer
+
+Correlation matrix
+  1     -0.34  -0.38  -0.32  -0.3   -0.25  -0.31 
+ -0.34   1      0.76   0.53   0.52   0.27   0.79 
+ -0.38   0.76   1      0.54   0.56   0.53   0.86 
+ -0.32   0.53   0.54   1      0.58   0.49   0.66 
+ -0.3    0.52   0.56   0.58   1      0.55   0.61 
+ -0.25   0.27   0.53   0.49   0.55   1      0.61 
+ -0.31   0.79   0.86   0.66   0.61   0.61   1    
+
+
+eigenvalue	proportion	cumulative
+  4.17622	  0.5966 	  0.5966 	-0.454class-0.432MMAX-0.395MMIN-0.378CACH-0.377CHMIN...
+  0.83214	  0.11888	  0.71548	0.8  MYCT+0.47 CHMAX-0.252MMIN+0.222CHMIN+0.119CACH...
+  0.78879	  0.11268	  0.82816	0.54 MYCT+0.521MMIN-0.512CHMAX+0.247MMAX+0.238class...
+  0.51817	  0.07402	  0.90219	-0.661CACH+0.466CHMAX-0.401CHMIN+0.378MMAX+0.19 class...
+  0.41632	  0.05947	  0.96166	-0.769CHMIN+0.6  CACH+0.14 class+0.137CHMAX-0.099MMIN...
+
+Eigenvectors
+ V1	 V2	 V3	 V4	 V5	
+ 0.2372	 0.7999	 0.5395	-0.0629	-0.0035	MYCT
+-0.3946	-0.2519	 0.5214	-0.0469	-0.0985	MMIN
+-0.4316	-0.0764	 0.2474	 0.3781	-0.0191	MMAX
+-0.3784	 0.1187	-0.112 	-0.6606	 0.6002	CACH
+-0.3767	 0.2216	-0.2105	-0.4013	-0.7691	CHMIN
+-0.3331	 0.4701	-0.5124	 0.4661	 0.1366	CHMAX
+-0.4536	 0.0819	 0.2376	 0.1902	 0.1398	class
+
+Ranked attributes:
+ 0.4034  1 -0.454class-0.432MMAX-0.395MMIN-0.378CACH-0.377CHMIN...
+ 0.2845  2 0.8  MYCT+0.47 CHMAX-0.252MMIN+0.222CHMIN+0.119CACH...
+ 0.1718  3 0.54 MYCT+0.521MMIN-0.512CHMAX+0.247MMAX+0.238class...
+ 0.0978  4 -0.661CACH+0.466CHMAX-0.401CHMIN+0.378MMAX+0.19 class...
+ 0.0383  5 -0.769CHMIN+0.6  CACH+0.14 class+0.137CHMAX-0.099MMIN...
+
+Selected attributes: 1,2,3,4,5 : 5
+
