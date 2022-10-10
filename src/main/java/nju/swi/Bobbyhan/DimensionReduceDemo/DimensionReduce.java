@@ -26,6 +26,7 @@ public class DimensionReduce {
     public void pca(Instances data) {
         try {
             PrincipalComponents pca = new PrincipalComponents();
+            // 数据的中心化
             pca.setCenterData(true);
             Ranker ranker = new Ranker();
             ranker.setNumToSelect(5);
@@ -40,12 +41,14 @@ public class DimensionReduce {
         }
     }
 
-
     public static void main(String[] args) {
         DimensionReduce dimensionReduce = new DimensionReduce();
         try {
             Instances data = IOHelper.loadARFF(DATASET_PATH);
             data = dimensionReduce.preProcess(data);
+            // 设置类标签
+            // 这个不参与降维
+            data.setClassIndex(data.numAttributes() - 1);
             dimensionReduce.pca(data);
         } catch (Exception e) {
             e.printStackTrace();

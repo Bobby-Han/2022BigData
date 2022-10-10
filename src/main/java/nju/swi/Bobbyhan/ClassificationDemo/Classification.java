@@ -25,6 +25,7 @@ public class Classification {
             Instances testData = new Instances(data, trainSize, testSize);
             // 使用训练集训练模型
             J48 model = (J48) modelGenerator.buildClassifier(trainData);
+            // 模型评估
             String eval = modelGenerator.evaluateModel(model, trainData, testData);
             System.out.println(eval);
             modelGenerator.saveModel(model, MODEL_PATH);
